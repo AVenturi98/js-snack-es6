@@ -14,19 +14,19 @@ const equipe = [
         nome: 'Rossa',
         'punti-fatti': 0,
         'falli-subiti': 0
-    },{
+    }, {
         nome: 'Gialla',
         'punti-fatti': 0,
         'falli-subiti': 0
-    },{
+    }, {
         nome: 'Blu',
         'punti-fatti': 0,
         'falli-subiti': 0
-    },{
+    }, {
         nome: 'Verde',
         'punti-fatti': 0,
         'falli-subiti': 0
-    },{
+    }, {
         nome: 'Nera',
         'punti-fatti': 0,
         'falli-subiti': 0
@@ -40,11 +40,11 @@ const equipeScore = [];
 for (let i = 0; i < equipe.length; i++) {
 
     const elments = equipe[i];
-    
+
     const numberRandom = parseInt(Math.random() * 20);
     const numberRandom2 = parseInt(Math.random() * 20);
     // console.log(numberRandom);
-    
+
     const a = elments['punti-fatti'] = numberRandom;
     const b = elments['falli-subiti'] = numberRandom2;
     // console.log(elments)
@@ -54,7 +54,7 @@ for (let i = 0; i < equipe.length; i++) {
         nome: elments.nome,
         falli: b
     })
-  
+
 }
 
 // console.log(equipeScore);
