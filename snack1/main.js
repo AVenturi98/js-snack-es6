@@ -10,7 +10,7 @@ Stampare a schermo la bici con peso minore.
 const objectArray = [
     {
         nome: 'Rosso',
-        peso: 4
+        peso: 9
     }, {
         nome: 'Giallo',
         peso: 6
@@ -35,9 +35,9 @@ for (let i = 0; i < objectArray.length; i++) {
 
     const elements = objectArray[i];
 
-    for (let key in elements)  {
+    for (let key in elements) {
 
-        console.log(elements[key]);
+        // console.log(elements[key]);
         const elementToIndex = document.createElement('li');
         elementToIndex.innerText = key + ': ' + elements[key];
         listBike.appendChild(elementToIndex)
@@ -45,15 +45,15 @@ for (let i = 0; i < objectArray.length; i++) {
 }
 
 
-
+const weightsBike = []
 
 for (let i = 0; i < objectArray.length; i++) {
 
     const weightBike = objectArray[i];
-
-    if (weightBike.peso < bikeFirstWeight.peso) { 
-        bikeFirstWeight = weightBike;       
-        console.log(bikeFirstWeight);
-        bikeMinWeight.innerText = bikeFirstWeight.peso
-    }
+    weightsBike.push(weightBike.peso)
+    // console.log(weightBike.peso)
 }
+
+const minWeight = Math.min(...weightsBike)
+bikeMinWeight.innerHTML = minWeight
+
